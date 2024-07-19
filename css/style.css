@@ -13,3 +13,24 @@ body {
     min-height: 100vh;
     background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
 }
+
+.container {
+    position: relative;
+    width: 1000px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background: white;
+    display: flex;
+}
+
+.container .cont-1 {
+    position: relative;
+    flex: 30%;
+    background-color: yellow;
+}
+
+.container .cont-2 {
+    position: relative;
+    flex: 70%;
+    background-color: blue;
+}
