@@ -26,11 +26,11 @@ body {
 .container .cont-1 {
     position: relative;
     flex: 30%;
-    background-color: yellow;
+    background-color: white;
 }
 
 .container .cont-2 {
     position: relative;
     flex: 70%;
-    background-color: blue;
+    background: url(../image/mine.jpg);
 }
