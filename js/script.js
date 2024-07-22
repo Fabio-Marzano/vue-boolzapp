@@ -5,7 +5,7 @@ var app = new Vue(
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: './img/avatar_1.jpg',
+                    avatar: './image/avatar_1.jpg',
                     visible: true,
                     messages: [
                         {
@@ -27,7 +27,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Fabio',
-                    avatar: '.img/avatar_2.jpg',
+                    avatar: './image/avatar_2.jpg',
                     visible: true,
                     messages: [
                         {
@@ -49,7 +49,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Samuele',
-                    avatar: './img/avatar_3.jpg',
+                    avatar: './image/avatar_3.jpg',
                     visible: true,
                     messages: [
                         {
@@ -71,7 +71,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Alessandro B.',
-                    avatar: './img/avatar_4.jpg',
+                    avatar: './image/avatar_4.jpg',
                     visible: true,
                     messages: [
                         {
@@ -88,7 +88,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Alessandro L.',
-                    avatar: './img/avatar_5.jpg',
+                    avatar: './image/avatar_5.jpg',
                     visible: true,
                     messages: [
                         {
@@ -105,7 +105,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Claudia',
-                    avatar: './img/avatar_6.jpg',
+                    avatar: './image/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
@@ -127,7 +127,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Federico',
-                    avatar: './img/avatar_7.jpg',
+                    avatar: './image/avatar_7.jpg',
                     visible: true,
                     messages: [
                         {
@@ -144,7 +144,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Davide',
-                    avatar: './img/avatar_8.jpg',
+                    avatar: './image/avatar_8.jpg',
                     visible: true,
                     messages: [
                         {
