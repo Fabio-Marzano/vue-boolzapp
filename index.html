@@ -104,7 +104,7 @@
             <!-- area messaggi -->
             <div class="message-area">
                 <div v-for="(message, index) in filteredContacts[currentContact].messages" class="message" :class="(filteredContacts[currentContact].messages[index].status == 'sent') ? 'message-sent' : 'message-received'" @mouseover="setIndexMessage(index)" @mouseleave="removeIndexMessage()">
-                    {{filteredContacts[currentContact].messages[index].text}}
+                    {{filteredContacts[currentContact].messages[index].message}}
                     <span class="message-date">{{filteredContacts[currentContact].messages[index].date}}</span>
                     <div class="dropdown" :class="(index == currentMessage ? 'dropdown-active' : null)">
                         <!-- <span @click="deleteMessage(currentContact, currentMessage)">Delete message</span> -->
