@@ -69,7 +69,7 @@ body {
 }
 
 
-#left-side .notifications {
+#left-side .notifiche {
     display: flex;
     align-items: center;
     width: 100%;
@@ -78,7 +78,7 @@ body {
     background-color: #8EDAFC;
 }
 
-#left-side .notifications .bell-background {
+#left-side .notifiche .bell-background {
     height: 60px;
     width: 60px;
     margin-right: 10px;
@@ -90,11 +90,11 @@ body {
     border-radius: 50%;
 }
 
-#left-side .notifications .notifications.texts .strong {
+#left-side .notifiche .notifiche.texts .strong {
     font-weight: 700;
 }
 
-#left-side .notifications .notifications-texts > a {
+#left-side .notifiche .notifiche-texts > a {
     color: grey;
     font-size: 14px;
 }
@@ -306,4 +306,3 @@ body {
     border-radius: 10px;
     background-color: #fff;
 }
- /*background-image: url("../img/whatsapp-background.jpg");

@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- vue cdn -->
+    <!-- VUE CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
-    <!-- day.js cdn -->
+
+    <!-- JS CDN -->
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <!-- google font -->
+    <!-- FONT GOOGLE -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <!-- font awesome -->
+    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <!-- my css -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <title>Boolzap</title>
 </head>
@@ -24,7 +24,7 @@
         <!-- LEFT SIDE -->
         <div id="left-side">
 
-            <!-- nav utente -->
+            
             <div class="user-nav">
                 <div class="l-user-icons">
                     <img src="./image/avatar_io.jpg" alt="Avatar Utente">
@@ -36,30 +36,29 @@
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
-            <!-- /nav utente -->
 
-            <!-- notifiche -->
-            <div class="notifications">
+
+            <!-- SEZIONE NOTIFICHE -->
+            <div class="notifiche">
                 <div class="bell-background">
                     <i class="fas fa-bell-slash"></i>
                 </div>
-                <div class="notifications-texts">
+                <div class="notifiche-texts">
                     <div class="strong">Ricevi notifiche di nuovi messaggi</div>
                     <a href="#">Attiva le notifiche desktop</a>
                 </div>           
             </div>
-            <!-- /notifiche -->
+            
 
-            <!-- ricerca contatti -->
+            <!-- CERCA CONTATTI -->
             <div class="chat-search">
                 <div class="search-icon">
                     <i class="fas fa-search"></i>
                 </div>
                 <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search" @keydown.enter="filteredContacts()">
             </div>
-            <!-- /ricerca contatti -->
-
-            <!-- lista contatti -->
+            
+            <!-- LISTA CONTATTI -->
             <div class="contact-list">
                 <div v-for="(contact, index) in filteredContacts" class="contact" 
                 :class="(index == currentContact ? 'contact-active' : null)" 
@@ -76,15 +75,15 @@
                     </div>
                 </div>
             </div>
-            <!-- /lista contatti -->
+            
 
         </div>
-        <!-- /LEFT SIDE -->
+        
 
         <!-- RIGHT SIDE -->
         <div id="right-side">
 
-            <!-- nav contatto -->
+            <!-- CONTATTO -->
             <div class="contact-nav">
                 <div class="l-contact-icons">
                     <img :src="filteredContacts[currentContact].avatar" alt="Avatar Utente">
@@ -99,31 +98,31 @@
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
-            <!-- /nav contatto -->
 
-            <!-- area messaggi -->
+
+            <!-- MESSAGE AREA -->
             <div class="message-area">
                 <div v-for="(message, index) in filteredContacts[currentContact].messages" class="message" :class="(filteredContacts[currentContact].messages[index].status == 'sent') ? 'message-sent' : 'message-received'" @mouseover="setIndexMessage(index)" @mouseleave="removeIndexMessage()">
                     {{filteredContacts[currentContact].messages[index].message}}
                     <span class="message-date">{{filteredContacts[currentContact].messages[index].date}}</span>
                     <div class="dropdown" :class="(index == currentMessage ? 'dropdown-active' : null)">
-                        <!-- <span @click="deleteMessage(currentContact, currentMessage)">Delete message</span> -->
+                        
                         <i class="fas fa-trash" @click="deleteMessage(currentContact, currentMessage)"></i>
                     </div>
                 </div>
             </div>
-            <!-- /area messaggi -->
 
-            <!-- controlli nuovo messaggio -->
+
+            <!-- NUOVI MESSAGGI -->
             <div class="text-controls">
                 <i class="far fa-smile"></i>
                 <input type="text" placeholder="Scrivi un messaggio" v-model="messageText" @keydown.enter="newMessage(currentContact)">
                 <i class="fas fa-microphone"></i>
             </div>
-            <!-- /controlli nuovo messaggio -->
+
 
         </div>
-        <!-- /RIGHT SIDE -->
+
 
     </div>
 
