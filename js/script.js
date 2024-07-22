@@ -13,6 +13,7 @@ var app = new Vue(
                             date: '10/01/2020 15:30:55',
                             message: 'Hai portato a spasso il cane?',
                             status: 'sent'
+                            
                         },
                         {
                             date: '10/01/2020 15:50:00',
@@ -178,23 +179,23 @@ var app = new Vue(
                 this.currentContact = position;
                 return this.currentContact;
             },
-            // GENERO FUNZIONE PER INSERIRE IL MESSAGGIO CHE MI CREA LA RISPOSTA//
+            // GENERO FUNZIONE PER INSERIRE IL NUOVO MESSAGGIO CHE MI CREA LA RISPOSTA//
             newMessage: function (contact) {
                 let newSentMessage = {
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                    text: this.messageText,
+                    text: this.message,
                     status: 'sent'
                 };
                 //PUSHO IL MESSAGGIO TRAMITE LA FUNZIONE FILTERED//
                 this.filteredContacts[contact].messages.push(newSentMessage);
 
                 this.messageText = "";
-
+                //CREO FUNZIONE CHE MI CONSENTE DI RICEVERE IL MESSAGGIO DI RISPOSTA//
                 setTimeout(
                     () => {
                         let newReceivedMessage = {
                             date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                            text: "Ok",
+                            text: "",
                             status: 'received'
                         };
 
