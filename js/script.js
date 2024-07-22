@@ -185,7 +185,7 @@ var app = new Vue(
                     text: this.messageText,
                     status: 'sent'
                 };
-
+                //PUSHO IL MESSAGGIO TRAMITE LA FUNZIONE FILTERED//
                 this.filteredContacts[contact].messages.push(newSentMessage);
 
                 this.messageText = "";
