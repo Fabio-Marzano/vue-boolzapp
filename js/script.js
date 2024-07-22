@@ -1,3 +1,4 @@
+//AVVIO CICLO DELL'ARRAY//
 var app = new Vue(
     {
         el: '#root',
@@ -166,18 +167,18 @@ var app = new Vue(
                 }
             ]
             ,
-            currentContact: 0,  //index contatto
-            currentMessage: null,   //index messaggio
-            messageText: "",    //campo vuoto messaggio
-            search: "",     //campo vuoto ricerca contatti
+            currentContact: 0,  //CONTATTO//
+            currentMessage: null,   //MESSAGGIO//
+            messageText: "",    //MESSAGGIO VUOTO//
+            search: "",     //RICERCA CONTATTI VUOTA//
         },
         methods: {
-            // funzione per impostare l'index del contatto cliccato
+            // FUNZIONE PER ATTIVARE IL CONTATTO CLICCATO//
             setIndexContact: function (position) {
                 this.currentContact = position;
                 return this.currentContact;
             },
-            // funzione che inserisci messaggio scritto nell'array e da la risposta
+            // GENERO FUNZIONE PER INSERIRE IL MESSAGGIO CHE MI CREA LA RISPOSTA//
             newMessage: function (contact) {
                 let newSentMessage = {
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
@@ -202,22 +203,22 @@ var app = new Vue(
                     }, 1000
                 );
             },
-            // funzione per impostare l'index del messaggio al mouseenter
+            // ATTIVO LA FUNZIONE PER IMPOSTARE L'INDEX DEL MESSAGGIO//
             setIndexMessage: function (position) {
                 this.currentMessage = position;
                 return this.currentMessage;
             },
-            // funzione per rimuovere l'index del messaggio al mouseleave
+            // ATTIVO FUNZIONE PER RIMUOVERE IL MESSAGGIO//
             removeIndexMessage: function () {
                 this.currentMessage = null;
                 return this.currentMessage;
             },
-            // funzione per eliminare il messaggio
+            // FUNZIONE PER ELIMINARE DEFINITIVAMENTE IL MESSAGGIO//
             deleteMessage: function (position, messagePosition) {
                 this.filteredContacts[position].messages.splice(messagePosition, 1);
             },
         },
-        // funzione per filtrare i contatti
+        // GENERO LA FUNZIONE PER FILTRARE I MIEI CONTATTI//
         computed: {
             filteredContacts() {
                 return this.contacts.filter(
