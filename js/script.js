@@ -183,7 +183,7 @@ var app = new Vue(
             newMessage: function (contact) {
                 let newSentMessage = {
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                    text: this.messageText,
+                    message: this.messageText,
                     status: 'sent'
                 };
                 //PUSHO IL MESSAGGIO TRAMITE LA FUNZIONE FILTERED//
@@ -195,7 +195,7 @@ var app = new Vue(
                     () => {
                         let newReceivedMessage = {
                             date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                            text: "Ok",
+                            message: "Ok",
                             status: 'received'
                         };
 
