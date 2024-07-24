@@ -195,7 +195,7 @@ var app = new Vue(
                     () => {
                         let newReceivedMessage = {
                             date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                            text: "",
+                            text: "Ok",
                             status: 'received'
                         };
 
